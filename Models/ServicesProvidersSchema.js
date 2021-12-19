@@ -4,10 +4,10 @@ const serviceProviderSchema = new mongoose.Schema({
   name: {
     type: String,required:true
   },
- imge: {
+ img: {
     type: String,required:true,unique:true
   },
-  Desc: {
+  desc: {
     type: String,
   },
 });
