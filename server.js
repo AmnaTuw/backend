@@ -1,9 +1,11 @@
 const { json } = require('express')
+const db = require('./db')
 const cors = require('cors')
 const express = require('express')
+const bcrypt = require('bcrypt')
 const { userRouter } = require('./Routers/userRouter')
 const { serviceRouter } = require('./Routers/serviceRouter')
-const { productRouter } = require('./Routers/serviceRouter')
+const { productRouter } = require('./Routers/productRouter')
 
 const app = express()
 require('dotenv').config()
