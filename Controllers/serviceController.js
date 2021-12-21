@@ -1,22 +1,23 @@
-const Service = require('../Models/servicesSchema')
+const {Service} = require('../Models/servicesSchema')
 
 
-const addNewService = async function(){
-    try{
-        const newService = new Service({
-            img: req.img,
-            name: req.name,
-            desc: req.desc,
-            price: req.price,
-            providerName: req.providerName
+const addNewService =  (req, res)=>{
+        const newService =   new Service({
+            name: req.body.name,
+            desc: req.body.desc,
+            price: req.body.price
         })
-        .then(newService.save())
-    }catch(err){
-        res.send(err.message).status(404)
-    }   
+        newService.save()
+        .then((result)=>{
+                res.json(result)
+            })
+    
+    .catch((error)=>{
+        console.log(error)
+    })
 }
 
-const getAllServices = function(){
+const getAllServices = (req, res)=>{
     res.send(Service)
 }
 
