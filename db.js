@@ -6,7 +6,7 @@ async function connectDB() {
     await mongoose.connect(
       "mongodb+srv://Am:Am1234@cluster0.hyaeu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
     );
-    console.log("database");
+    console.log("database connected!");
   } catch (err) {
     console.log(err);
   }

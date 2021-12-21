@@ -6,12 +6,12 @@ const {
   saveProvider,
   deleteProvider,
   updateProvider,
-} = require("../Controllers/SerProviderControllers");
-const { ServiceProvider } = require("../models/ServicesProvidersSchema");
+} = require("../Controllers/providerController");
+const authorization = require("../Middleware/authorization");
 providerRouter.get("/", getAllProvider);
 providerRouter.post("/oneProvider", getProvider);
-providerRouter.post("/save", saveProvider);
+providerRouter.post("/save",authorization("providerOpr"), saveProvider);
 providerRouter.delete("/delete/:id", deleteProvider);
 providerRouter.put("/update/:id", updateProvider);
 
-module.exports = { serProRouters };
+module.exports =  {providerRouter} 
