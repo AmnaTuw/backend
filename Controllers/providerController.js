@@ -35,11 +35,11 @@ const getProvider = (req, res) => {
 //------------------------------------------------------//
 
 const saveProvider = (req, res) => {
-  const { name, imge, Desc } = req.body;
+  const { name, img, desc } = req.body;
   const newProvider = new ServiceProvider({
     name,
-    imge,
-    Desc,
+    img,
+    desc,
   });
   newProvider
     .save()
