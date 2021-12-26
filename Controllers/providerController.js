@@ -47,6 +47,8 @@ const saveProvider = (req, res) => {
       res.status(200).json(result);
     })
     .catch((err) => {
+      console.log(err);
+
       res.status(404).json(err, "Error, Service Provider Can Not Saving ");
     });
 };

@@ -5,7 +5,7 @@ const serviceProviderSchema = new mongoose.Schema({
     type: String,required:true
   },
  img: {
-    type: String,required:true,unique:true
+    type: String,required:true
   },
   desc: {
     type: String,

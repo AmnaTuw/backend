@@ -5,4 +5,4 @@ const {addNewService, getAllServices} = require('../Controllers/serviceControlle
 serviceRouter.get('/', getAllServices)
 serviceRouter.post('/add', addNewService)
 
-module.exports = {serviceRouter}
+module.exports = {serviceRouter} 
